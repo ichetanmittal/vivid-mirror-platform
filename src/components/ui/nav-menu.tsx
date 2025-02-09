@@ -1,12 +1,14 @@
-
 import React from 'react';
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 interface NavMenuProps {
   className?: string;
 }
 
 export const NavMenu = ({ className }: NavMenuProps) => {
+  const navigate = useNavigate();
+
   return (
     <nav className={cn("fixed top-0 left-0 right-0 z-50 bg-[#0D1117]/80 backdrop-blur-md", className)}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
@@ -21,7 +23,10 @@ export const NavMenu = ({ className }: NavMenuProps) => {
           <a href="#solutions" className="text-white hover:text-[#C5F82A] transition-colors">
             Solutions
           </a>
-          <a href="#about" className="text-white hover:text-[#C5F82A] transition-colors">
+          <a 
+            href="/about-us" 
+            className="text-white hover:text-[#C5F82A] transition-colors"
+          >
             About Us
           </a>
           <a href="#blogs" className="text-white hover:text-[#C5F82A] transition-colors">

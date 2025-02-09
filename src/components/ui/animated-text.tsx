@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { cn } from "@/lib/utils";
 
@@ -15,6 +14,7 @@ export const AnimatedText = ({ text, delay = 0, className }: AnimatedTextProps) 
     const element = elementRef.current;
     if (element) {
       element.style.animationDelay = `${delay}ms`;
+      element.style.animationFillMode = 'forwards';
     }
   }, [delay]);
 
