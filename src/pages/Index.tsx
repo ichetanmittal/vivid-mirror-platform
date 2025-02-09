@@ -2,62 +2,59 @@
 import React from 'react';
 import { NavMenu } from '@/components/ui/nav-menu';
 import { AnimatedText } from '@/components/ui/animated-text';
-import { GlassCard } from '@/components/ui/glass-card';
-import { ArrowRight, Zap, Shield, Sparkles } from 'lucide-react';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white to-secondary">
+    <div className="min-h-screen bg-[#0D1117] relative overflow-hidden">
+      {/* Background Pattern */}
+      <div 
+        className="absolute inset-0 opacity-20"
+        style={{
+          backgroundImage: `url('/lovable-uploads/66ced0b8-3434-47ec-a152-1dff39a32d55.png')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
+      
       <NavMenu />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto text-center">
-          <AnimatedText
-            text="Build Better Software"
-            className="text-5xl md:text-6xl font-bold text-gray-900 mb-6"
-          />
-          <AnimatedText
-            text="Premium development tools for modern teams"
-            className="text-xl text-gray-600 mb-12"
-            delay={200}
-          />
-          <button className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-lg inline-flex items-center space-x-2 transition-all hover:scale-105">
-            <span>Get Started</span>
-            <ArrowRight className="w-4 h-4" />
-          </button>
+      <section className="relative pt-40 pb-20 px-4">
+        <div className="container mx-auto">
+          <div className="max-w-4xl">
+            <AnimatedText
+              text="India's First"
+              className="text-5xl md:text-7xl font-bold text-white mb-4"
+            />
+            <AnimatedText
+              text="Deep-Tier Supply Chain"
+              className="text-5xl md:text-7xl font-bold text-white mb-4"
+              delay={100}
+            />
+            <AnimatedText
+              text="Financing Platform"
+              className="text-5xl md:text-7xl font-bold text-white mb-8"
+              delay={200}
+            />
+            <AnimatedText
+              text="Built on DLT and Smart Contracts"
+              className="text-xl md:text-2xl text-[#C5F82A] mb-12"
+              delay={300}
+            />
+            <button className="bg-[#C5F82A] text-black px-8 py-3 rounded-full hover:bg-[#C5F82A]/90 transition-all text-lg">
+              Book a Demo
+            </button>
+          </div>
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4" id="features">
+      {/* Description Section */}
+      <section className="relative py-20 px-4 bg-[#0A0E14]/50">
         <div className="container mx-auto">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Features that make us special
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <GlassCard>
-              <Zap className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Lightning Fast</h3>
-              <p className="text-gray-600">
-                Build and deploy with incredible speed and efficiency.
-              </p>
-            </GlassCard>
-            <GlassCard>
-              <Shield className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Secure by Default</h3>
-              <p className="text-gray-600">
-                Enterprise-grade security built into every feature.
-              </p>
-            </GlassCard>
-            <GlassCard>
-              <Sparkles className="w-10 h-10 text-primary mb-4" />
-              <h3 className="text-xl font-semibold mb-2">Modern Tools</h3>
-              <p className="text-gray-600">
-                Access to the latest development tools and features.
-              </p>
-            </GlassCard>
-          </div>
+          <p className="text-2xl md:text-3xl text-white/90 max-w-4xl">
+            Enabling traditional banks to offer affordable credit to SMEs beyond 
+            Tier-1, without raising the risk.
+          </p>
         </div>
       </section>
     </div>
